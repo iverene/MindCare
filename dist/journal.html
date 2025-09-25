@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
   <main>
@@ -49,7 +52,7 @@
             <textarea id="journalEntry" rows="10" cols="50" placeholder="How are you feeling today? Write your thoughts here…" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-calmBlue"></textarea>
             <div class="flex justify-end gap-5">
                 <label id="receiveLetter" class="flex items-center gap-2">
-                    <input type="checkbox" class="w-5 h-5 rounded-full border-gray-400 text-calmBlue focus:ring-calmBlue">
+                    <input id="letterCheckbox" type="checkbox" class="w-5 h-5 rounded-full border-gray-400 text-calmBlue focus:ring-calmBlue">
                     <span class="text-charcoal">Receive a MindCare letter</span>
                 </label>
                 <button id="saveEntry" class="px-6 py-2 bg-calmBlue text-offWhite rounded-full hover:bg-deepBlue transition">Save Entry</button>
@@ -57,17 +60,30 @@
             
         </div>
 
+        <!-- Notification Icon -->
         <div id="notificationIcon" class="relative hidden">
-            <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1">1</span>
-            <img src="/assets/message-icon.png" alt="Messages" class="w-8 h-8 cursor-pointer">
+        <!-- Red dot (hidden by default) -->
+        <span id="notificationDot" class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full hidden"></span>
+        
+        <i class="fa-solid fa-message text-2xl text-deepBlue cursor-pointer"></i>
         </div>
+
       </div>
     </section>
 
-    <section class="bg-offWhite py-10 px-5">
-      
+    <section class="bg-offWhite py-10 px-5 text-deepBlue">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Entries Container -->
+            <div id="entriesContainer" class="bg-offWhite p-4 rounded-lg shadow-md max-h-[400px] overflow-y-auto">
+                <h2 class="text-xl font-bold mb-2">Entries</h2>
+                <div id="entriesList" class="flex flex-col gap-4"></div>
+            </div>
 
+            <!-- Calendar -->
+            <div id="calendar" class="bg-offWhite p-4 rounded-lg shadow-md"></div>
+        </div>
     </section>
+
     <script src="./js/auth.js"></script>
     <script src="./js/journal.js"></script>
 </body>
