@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <section class="bg-gradient-to-b from-skyPastel to-lavenderPastel pt-4 pb-12 px-5 text-center m-0">
+      <header class="flex justify-between items-center mb-6">
+        <div class="flex items-center">
+          <a href="index.html"><img src="\assets\logo-and-text.png" alt="logo" class="h-12 w-auto"></a>
+        </div>
+
+        <nav class="flex gap-20 text-offWhite font-raleway text-lg">
+          <a href="journal.html" class="hover:text-deepBlue transition active">Journal</a>
+          <a href="resources.html" class="hover:text-deepBlue transition">Resources</a>
+          <a href="board.html" class="hover:text-deepBlue transition">Board</a>
+          <a href="music.html" class="hover:text-deepBlue transition">Music</a>
+        </nav>
+      </header>
+
+      <div class="flex flex-col items-center justify-start text-center text-deepBlue gap-8 ">
+        <h1 class="text-2xl font-bold">Your Daily Journal</h1>
+
+        <div class="bg-offWhite/50 w-200 p-4 rounded-lg shadow-md gap-4">
+            <button class="mood-btn px-4 py-2 w-30 h-30 hover:scale-105 transition" data-mood="Happy">
+                <img src="\assets\happy-icon.png" alt="">Happy
+            </button>
+            <button class="mood-btn px-4 py-2 w-30 h-30 hover:scale-105 transition" data-mood="Calm">
+                <img src="\assets\calm-icon.png" alt="">Calm
+            </button>
+            <button class="mood-btn px-4 py-2 w-30 h-30 hover:scale-105 transition" data-mood="Motivated">
+                <img src="\assets\motivated-icon.png" alt="">Motivated
+            </button>
+            <button class="mood-btn px-4 py-2 w-30 h-30 hover:scale-105 transition" data-mood="Sad">
+                <img src="\assets\sad-icon.png" alt="">Sad
+            </button>
+            <button class="mood-btn px-4 py-2 w-30 h-30 hover:scale-105 transition" data-mood="Stressed">
+                <img src="\assets\stressed-icon.png" alt="">Stressed
+            </button>
+            <button class="mood-btn px-4 py-2 w-30 h-30 hover:scale-105 transition" data-mood="Tired">
+                <img src="\assets\tired-icon.png" alt="">Tired
+            </button>
+        </div>
+
+        <div class="bg-offWhite/75 w-200 p-4 rounded-lg shadow-md gap-4">
+            <textarea id="journalEntry" rows="10" cols="50" placeholder="How are you feeling today? Write your thoughts here…" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-calmBlue"></textarea>
+            <div class="flex justify-end gap-5">
+                <label id="receiveLetter" class="flex items-center gap-2">
+                    <input type="checkbox" class="w-5 h-5 rounded-full border-gray-400 text-calmBlue focus:ring-calmBlue">
+                    <span class="text-charcoal">Receive a MindCare letter</span>
+                </label>
+                <button id="saveEntry" class="px-6 py-2 bg-calmBlue text-offWhite rounded-full hover:bg-deepBlue transition">Save Entry</button>
+            </div>
+            
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-offWhite py-10 px-5">
+      
+
+    </section>
+    <script src="./js/auth.js"></script>
+    <script src="./js/journal.js"></script>
+</body>

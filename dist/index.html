@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <section class="bg-gradient-to-b from-skyPastel to-lavenderPastel rounded-b-[50px] pt-4 pb-12 px-5 text-center m-0">
+      <header class="flex justify-between items-center mb-12">
+        <div class="flex items-center">
+          <img src="\assets\logo-and-text.png" alt="logo" class="h-12 w-auto">
+        </div>
+
+        <nav class="flex gap-20 text-offWhite font-raleway text-lg">
+          <a href="journal.html" class="hover:text-deepBlue transition">Journal</a>
+          <a href="resources.html" class="hover:text-deepBlue transition">Resources</a>
+          <a href="board.html" class="hover:text-deepBlue transition">Board</a>
+          <a href="music.html" class="hover:text-deepBlue transition">Music</a>
+        </nav>
+
+
+      </header>
+
+      <div class="relative w-full min-h-[calc(100vh-120px)] flex items-center justify-center text-center">
+        <img src="\assets\notes-icon.png" alt="" 
+            class="absolute top-10 left-6 w-40 h-40">
+        <img src="\assets\music-icon.png" alt="" 
+            class="absolute top-6 right-15 w-40 h-40">
+        <img src="\assets\journal-icon.png" alt="" 
+            class="absolute bottom-10 left-25 w-40 h-40">
+        <img src="\assets\happy-icon.png" alt="" 
+            class="absolute bottom-10 right-30 w-40 h-40">
+
+        <div class="space-y-6">
+          <h1 class="font-raleway font-bold text-deepBlue text-5xl">
+            Your safe space for healing and <br> growth.
+          </h1>
+          <p class="font-nunito italic text-deepBlue text-2xl">
+            Track your moods, reflect through journaling, connect with positivity, and find comfort in music.
+          </p>
+          <button id="startJourneyBtn" class="px-10 py-2 bg-deepBlue text-offWhite rounded-full hover:bg-calmBlue text-lg transition">
+            Start Your Journey
+          </button>
+
+          <div id="nicknameModal" class="fixed flex inset-0 items-center justify-center bg-black/50 hidden">
+            <div class="bg-offWhite p-6 rounded-2xl shadow-lg text-center w-[300px]">
+              <h2 class="text-xl font-bold text-deepBlue mb-4">Enter Your Nickname</h2>
+              <input id="nicknameInput" type="text" placeholder="Your nickname..."
+                    class="w-full p-2 border border-gray-300 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-deepBlue">
+              <div class="flex justify-center gap-4">
+                <button id="saveNickname" class="px-4 py-2 bg-deepBlue text-offWhite rounded-md hover:bg-calmBlue transition">
+                  Save
+                </button>
+                <button id="closeModal" class="px-4 py-2 bg-gray-300 text-deepBlue rounded-md hover:bg-gray-400 transition">
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </section>
+
+    <section class="bg-offWhite py-10 px-5 text-center">
+      <div class="flex items-baseline space-x-2 justify-center mt-6 mb-10">
+        <h1 class="font-raleway font-bold text-deepBlue text-3xl">Feature</h1>
+        <h1 class="font-nunit italic text-deepBlue text-3xl">Highlights</h1>
+      </div>
+      
+      <div class="cards">
+        <div class="card">
+          <img src="\assets\journal-icon.png" alt="journal">
+          <h2>Journal</h2>
+          <p>Write your daily reflections and receive heartfelt AI letters that bring comfort and encouragement.</p>
+        </div>
+
+        <div class="card">
+          <img src="\assets\resources-icon.png" alt="resources">
+          <h2 >Resources</h2>
+          <p>Access trusted hotlines, helpful guides, and wellness articles to support your mental health journey.</p>
+        </div>
+
+        <div class="card">
+          <img src="\assets\notes-icon.png" alt="notes">
+          <h2>Board</h2>
+          <p>Share uplifting notes and read messages from others to remind you that you’re not alone.</p>
+        </div>
+
+        <div class="card">
+          <img src="\assets\music-icon.png" alt="music">
+          <h2>Music</h2>
+          <p>Relax with calming playlists while following along with on-screen lyrics that soothe the mind.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gradient-to-b from-calmBlue to-offWhite py-10 px-5 text-center">
+      <div class="relative w-full min-h-[calc(100vh-120px)] flex items-center justify-center text-center">
+        <img src="\assets\cloud-icon.png" class="absolute top-10 left-6 w-50 h-50">
+        <img src="\assets\cloud-icon.png" class="absolute top-2 left-150 w-50 h-50">
+        <img src="\assets\cloud-icon.png" class="absolute top-10 right-25 w-50 h-50">
+        <img src="\assets\cloud-icon.png" class="absolute bottom-10 left-25 w-50 h-50">
+        <img src="\assets\cloud-icon.png" class="absolute bottom-10 right-25 w-50 h-50">
+
+        <div class="max-w-3xl mx-auto space-y-6 px-4">
+          <h2 class="font-raleway font-extrabold text-4xl md:text-5xl text-deepBlue">
+            About Mind<span class="font-nunito italic text-calmBlue">Care</span>
+          </h2>
+          <p class="font-nunito italic text-xl md:text-2xl text-charcoal leading-relaxed">
+            “<strong class="text-deepBlue">MindCare</strong> is designed to bring comfort, positivity, 
+            and support to your daily life. We believe every mind deserves care, 
+            and this space is created to make you feel <span class="font-semibold text-calmBlue">seen, heard, and supported.</span>”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-offWhite py-10 px-5 text-center space-y-6">
+      <div class="relative w-full py-25 flex items-center justify-center text-center">
+        <img src="\assets\hug-icon.png" class="absolute top-1 right-50 w-50 h-50">
+        <img src="\assets\logo.png" class="absolute bottom-1 left-50 w-60 h-60">
+
+        <div class="flex flex-col items-center justify-center space-y-3 mt-6 mb-10 -ml-10">
+          <h1 class="font-raleway font-bold italic text-3xl text-deepBlue">A safe space for your thoughts awaits.</h1>
+          <p class="font-nunito italic text-xl text-deepBlue">Here to remind you—you’re never alone in your journey.</p>
+          <button class="px-10 py-2 bg-deepBlue text-offWhite rounded-full hover:bg-calmBlue text-lg transition">Get Started</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gradient-to-b from-skyPastel to-lavenderPastel rounded-t-[50px] pt-4 pb-6 px-5 space-y-6 text-sm text-center m-0">
+    <div class="flex justify-between items-start px-10">
+      <div>
+        <img src="\assets\logo-and-text.png" alt="logo" class="h-12 w-auto">
+        <p class="font-poppins text-deepBlue">A gentle companion for your <br> thoughts, growth, and healing.</p>
+      </div>
+      
+      <div class="flex gap-16 text-left">
+        <div>
+          <p class="font-poppins text-deepBlue font-bold">GET INVOLVED</p>
+          <ul>
+            <li><a href="" class="font-poppins text-deepBlue hover:underline">Start Journaling</a></li>
+            <li><a href="" class="font-poppins text-deepBlue hover:underline">Read Articles</a></li>
+            <li><a href="" class="font-poppins text-deepBlue hover:underline">Share a positive note</a></li>
+            <li><a href="" class="font-poppins text-deepBlue hover:underline">Listen to music</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-poppins text-deepBlue font-bold">CONTACT \ HOTLINES</p>
+          <ul>
+            <li class="font-poppins text-deepBlue">
+              Philippines: <a href="https://www.ncmh.gov.ph/index.php" class="hover:underline">National Center for Mental Health Crisis Hotline</a>
+              <br><a href="tel:1553" class="hover:underline">1553</a> (landline)</a>
+              <br><a href="tel:+639663514518" class="hover:underline">0966-351-4518</a> / 
+                  <a href="tel:+639190571553" class="hover:underline">0919-057-1553</a> (mobile)
+            </li>
+            <li class="font-poppins text-deepBlue"> US: <a href="tel:988" class="hover:underline">National Suicide Prevention Lifeline — 988</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div>
+      <hr class="text-deepBlue">
+      <p class="font-poppins text-deepBlue">MindCare is not a replacement for professional help. If you are in crisis, please seek immediate support from a qualified professional or call your local hotline.</p>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
+  <script src="./js/auth.js"></script>
+</body>
+</html>

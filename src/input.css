@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&family=Raleway:wght@400;600;700&display=swap');
+
+@import "tailwindcss";
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: poppins, sans-serif;
+  }
+}
+
+@theme {
+    --font-raleway: "Raleway", sans-serif;
+    --font-nunito: "Nunito", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+
+    --color-calmBlue: #5DADEC;
+    --color-deepBlue: #2C3E50;
+    --color-pastelPink: #F7A8B8;
+    --color-offWhite: #FAFAFA;
+    --color-lightGray: #EAEAEA;
+    --color-charcoal: #333333;
+
+    --color-skyPastel: #a7d8ff;
+    --color-lavenderPastel: #c7ceea;
+}
+
+@layer components {
+  .active {
+    @apply text-deepBlue font-bold;
+  }
+  .cards {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8;
+  }
+
+  .card {
+    @apply bg-lightGray shadow-lg border border-calmBlue rounded-2xl p-5 
+           flex flex-col items-center text-center 
+           hover:shadow-2xl transition-shadow duration-300;
+  }
+
+  .card img {
+    @apply w-50 h-50 my-10 mx-6;
+  }
+
+  .card h2 {
+    @apply font-raleway font-bold text-xl text-deepBlue mb-2;
+  }
+
+  .card p {
+    @apply font-nunito text-charcoal text-sm italic;
+  }
+
+  .auth-popup {
+    transform: scale(0.9) translateX(100%);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    pointer-events: none;
+  }
+        
+.auth-popup.open {
+    transform: scale(1) translateX(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+}
