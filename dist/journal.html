@@ -8,12 +8,12 @@
 <body>
   <main>
     <section class="bg-gradient-to-b from-skyPastel to-lavenderPastel pt-4 pb-12 px-5 text-center m-0">
-      <header class="flex justify-between items-center mb-6">
+      <header class="flex justify-between items-center mb-6 relative">
         <div class="flex items-center">
           <a href="index.html"><img src="\assets\logo-and-text.png" alt="logo" class="h-12 w-auto"></a>
         </div>
 
-        <nav class="flex gap-20 text-offWhite font-raleway text-lg">
+        <nav class="absolute left-1/2 transform -translate-x-1/2 flex gap-20 text-offWhite font-raleway text-lg">
           <a href="journal.html" class="hover:text-deepBlue transition active">Journal</a>
           <a href="resources.html" class="hover:text-deepBlue transition">Resources</a>
           <a href="board.html" class="hover:text-deepBlue transition">Board</a>
@@ -55,6 +55,11 @@
                 <button id="saveEntry" class="px-6 py-2 bg-calmBlue text-offWhite rounded-full hover:bg-deepBlue transition">Save Entry</button>
             </div>
             
+        </div>
+
+        <div id="notificationIcon" class="relative hidden">
+            <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1">1</span>
+            <img src="/assets/message-icon.png" alt="Messages" class="w-8 h-8 cursor-pointer">
         </div>
       </div>
     </section>
