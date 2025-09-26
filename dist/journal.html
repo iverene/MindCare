@@ -59,24 +59,17 @@
             </div>
             
         </div>
-
-        <!-- Notification Icon -->
-        <div id="notificationIcon" class="relative hidden">
-        <!-- Red dot (hidden by default) -->
-        <span id="notificationDot" class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full hidden"></span>
-        
-        <i class="fa-solid fa-message text-2xl text-deepBlue cursor-pointer"></i>
-        </div>
-
       </div>
     </section>
 
     <section class="bg-offWhite py-10 px-5 text-deepBlue">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex justify-between max-w-6xl mx-auto">
             <!-- Entries Container -->
-            <div id="entriesContainer" class="bg-offWhite p-4 rounded-lg shadow-md max-h-[400px] overflow-y-auto">
-                <h2 class="text-xl font-bold mb-2">Entries</h2>
-                <div id="entriesList" class="flex flex-col gap-4"></div>
+            <div id="entriesContainer" class="p-4 overflow-y-auto">
+                <h2 class="text-xl font-bold mb-4">Journal Entries</h2>
+                <div id="entriesList" class="flex flex-col gap-6">
+                    <!-- Entries will be displayed here -->
+                </div>
             </div>
 
             <!-- Calendar -->
@@ -84,6 +77,8 @@
         </div>
     </section>
 
+
+  </main>
     <script src="./js/auth.js"></script>
     <script src="./js/journal.js"></script>
 </body>
