@@ -4,16 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
   <main>
     <section class="bg-gradient-to-b from-skyPastel to-lavenderPastel pt-4 pb-12 px-5 text-center m-0">
-      <header class="flex justify-between items-center mb-6">
+      <header class="flex justify-between items-center mb-6 relative">
         <div class="flex items-center">
           <a href="index.html"><img src="\assets\logo-and-text.png" alt="logo" class="h-12 w-auto"></a>
         </div>
 
-        <nav class="flex gap-20 text-offWhite font-raleway text-lg">
+        <nav class="absolute left-1/2 transform -translate-x-1/2 flex gap-20 text-offWhite font-raleway text-lg">
           <a href="journal.html" class="hover:text-deepBlue transition active">Journal</a>
           <a href="resources.html" class="hover:text-deepBlue transition">Resources</a>
           <a href="board.html" class="hover:text-deepBlue transition">Board</a>
@@ -49,7 +52,7 @@
             <textarea id="journalEntry" rows="10" cols="50" placeholder="How are you feeling today? Write your thoughts here…" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-calmBlue"></textarea>
             <div class="flex justify-end gap-5">
                 <label id="receiveLetter" class="flex items-center gap-2">
-                    <input type="checkbox" class="w-5 h-5 rounded-full border-gray-400 text-calmBlue focus:ring-calmBlue">
+                    <input id="letterCheckbox" type="checkbox" class="w-5 h-5 rounded-full border-gray-400 text-calmBlue focus:ring-calmBlue">
                     <span class="text-charcoal">Receive a MindCare letter</span>
                 </label>
                 <button id="saveEntry" class="px-6 py-2 bg-calmBlue text-offWhite rounded-full hover:bg-deepBlue transition">Save Entry</button>
@@ -59,10 +62,61 @@
       </div>
     </section>
 
-    <section class="bg-offWhite py-10 px-5">
-      
+    <section class="bg-offWhite py-10 px-5 text-deepBlue">
+        <div class="flex justify-between max-w-6xl mx-auto">
+            <!-- Entries Container -->
+            <div id="entriesContainer" class="p-4 overflow-y-auto">
+                <h2 class="text-xl font-bold mb-4">Journal Entries</h2>
+                <div id="entriesList" class="flex flex-col gap-6">
+                    <!-- Entries will be displayed here -->
+                </div>
+            </div>
 
+            <!-- Calendar -->
+            <div id="calendar" class="bg-offWhite p-4 rounded-lg shadow-md"></div>
+        </div>
     </section>
+  </main>
+
+    <footer class="bg-gradient-to-b from-skyPastel to-lavenderPastel rounded-t-[50px] pt-4 pb-6 px-5 space-y-6 text-sm text-center m-0">
+    <div class="flex justify-between items-start px-10">
+      <div>
+        <img src="\assets\logo-and-text.png" alt="logo" class="h-12 w-auto">
+        <p class="font-poppins text-deepBlue">A gentle companion for your <br> thoughts, growth, and healing.</p>
+      </div>
+      
+      <div class="flex gap-16 text-left">
+        <div>
+          <p class="font-poppins text-deepBlue font-bold">GET INVOLVED</p>
+          <ul>
+            <li><a href="" class="font-poppins text-deepBlue hover:underline">Start Journaling</a></li>
+            <li><a href="" class="font-poppins text-deepBlue hover:underline">Read Articles</a></li>
+            <li><a href="" class="font-poppins text-deepBlue hover:underline">Share a positive note</a></li>
+            <li><a href="" class="font-poppins text-deepBlue hover:underline">Listen to music</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-poppins text-deepBlue font-bold">CONTACT \ HOTLINES</p>
+          <ul>
+            <li class="font-poppins text-deepBlue">
+              Philippines: <a href="https://www.ncmh.gov.ph/index.php" class="hover:underline">National Center for Mental Health Crisis Hotline</a>
+              <br><a href="tel:1553" class="hover:underline">1553</a> (landline)</a>
+              <br><a href="tel:+639663514518" class="hover:underline">0966-351-4518</a> / 
+                  <a href="tel:+639190571553" class="hover:underline">0919-057-1553</a> (mobile)
+            </li>
+            <li class="font-poppins text-deepBlue"> US: <a href="tel:988" class="hover:underline">National Suicide Prevention Lifeline — 988</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div>
+      <hr class="text-deepBlue">
+      <p class="font-poppins text-deepBlue">MindCare is not a replacement for professional help. If you are in crisis, please seek immediate support from a qualified professional or call your local hotline.</p>
+    </div>
+  </footer>
+  
     <script src="./js/auth.js"></script>
     <script src="./js/journal.js"></script>
 </body>
